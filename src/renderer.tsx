@@ -79,16 +79,42 @@ export const renderer = jsxRenderer(({ children, title, description }) => {
               });
             }
 
-            // ── Enquiry form: button loading state ──
-            var form = document.querySelector('form[action="/enquire"]');
-            if (form) {
-              form.addEventListener('submit', function() {
-                var btn = form.querySelector('.form-submit');
-                if (btn) {
-                  btn.textContent = 'Sending…';
-                  btn.disabled = true;
-                  btn.style.opacity = '.7';
+            // ── Enquiry form: validation + loading state ──
+            var form = document.getElementById('enquire-form');
+            var submitBtn = document.getElementById('enquire-submit');
+            if (form && submitBtn) {
+              var requiredFields = ['first-name', 'last-name', 'email', 'company', 'message'];
+
+              function isFormValid() {
+                var allFilled = requiredFields.every(function(id) {
+                  var el = document.getElementById(id);
+                  return el && el.value.trim() !== '';
+                });
+                var privacy = document.getElementById('privacy');
+                var email = document.getElementById('email');
+                var emailValid = email && /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.value.trim());
+                return allFilled && emailValid && privacy && privacy.checked;
+              }
+
+              function updateSubmitState() {
+                submitBtn.disabled = !isFormValid();
+              }
+
+              requiredFields.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) {
+                  el.addEventListener('input', updateSubmitState);
+                  el.addEventListener('change', updateSubmitState);
                 }
+              });
+              var privacyEl = document.getElementById('privacy');
+              if (privacyEl) privacyEl.addEventListener('change', updateSubmitState);
+              updateSubmitState();
+
+              form.addEventListener('submit', function() {
+                submitBtn.textContent = 'Sending…';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '.7';
               });
             }
           })();

@@ -29,54 +29,62 @@ export const ServicesPage = () => (
           {([
             {
               n: '01',
+              id: 'pipeline-design',
               t: 'Pipeline Design',
               d: 'Funnel architecture, stage logic, conversion reporting, and pipeline discipline frameworks that give your revenue team clarity and commercial momentum. Covers lead qualification, stage gate design, forecasting methodology, and CRM structure alignment.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             },
             {
               n: '02',
+              id: 'fractional-cro',
               t: 'Fractional CRO',
               d: 'Senior revenue leadership and commercial planning delivered on a fractional basis. Executive-level accountability for pipeline, forecast, and GTM execution — without the cost or commitment of a full-time hire. Ideal for Series A–C businesses building toward a permanent CRO.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             },
             {
               n: '03',
+              id: 'apac-market-entry',
               t: 'APAC Market Entry',
               d: 'Regional opportunity assessment, channel strategy, partner identification, and practical go-to-market execution planning for B2B technology companies entering or scaling within Asia-Pacific. Includes market sizing, competitive landscape analysis, and localisation considerations.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             },
             {
               n: '04',
+              id: 'gtm-strategy',
               t: 'GTM Strategy',
               d: 'Positioning clarity, ICP definition, route-to-market review, and execution sequencing aligned to your business stage and growth objectives. Moves beyond frameworks to produce a practical commercial plan your team can execute with confidence.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
             },
             {
               n: '05',
+              id: 'commercial-due-diligence',
               t: 'Commercial Due Diligence',
               d: 'Revenue maturity assessment, GTM risk analysis, and commercial growth evaluation for investors, acquirers, and founders preparing for transactions. Provides a structured view of revenue quality, pipeline health, sales capability, and commercial upside.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             },
             {
               n: '06',
+              id: 'sales-enablement',
               t: 'Sales Enablement',
               d: 'Process review, sales methodology alignment, messaging refinement, and capability uplift that strengthens your revenue team\'s ability to convert. Covers qualification frameworks, objection handling, demo design, and win/loss analysis.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             },
             {
               n: '07',
+              id: 'revenue-architecture',
               t: 'Revenue Architecture',
               d: 'Systems thinking and commercial infrastructure design that builds scalable revenue foundations. Covers KPI framework design, revenue team structure, compensation model alignment, technology stack audit, and operating rhythm establishment.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             },
             {
               n: '08',
+              id: 'investor-readiness',
               t: 'Investor Readiness',
               d: 'Commercial narrative development, revenue model stress-testing, and growth-readiness review that builds investor confidence. Supports pre-raise preparation for founders and helps investors assess commercial quality in target businesses.',
               icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
             },
           ] as const).map(s => (
-            <div class="service-detail" key={s.n}>
+            <div class="service-detail" id={s.id} key={s.n}>
               <div class="service-detail__num">{s.n}</div>
               <div class="service-detail__body">
                 <h3 class="service-detail__title">{s.t}</h3>

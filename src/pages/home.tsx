@@ -156,20 +156,20 @@ export const HomePage = () => (
         </div>
         <div class="svc-grid">
           {([
-            { n:'01', t:'Pipeline Design',           d:'Funnel structure, stage logic, conversion discipline, and reporting frameworks that create pipeline clarity.' },
-            { n:'02', t:'Fractional CRO',            d:'Senior revenue leadership and commercial planning without the overhead of a full-time executive hire.' },
-            { n:'03', t:'APAC Market Entry',         d:'Regional opportunity assessment, entry planning, and practical execution support for Asia-Pacific expansion.' },
-            { n:'04', t:'GTM Strategy',              d:'Positioning, route-to-market review, and execution sequencing aligned to your growth objectives.' },
-            { n:'05', t:'Commercial Due Diligence',  d:'Revenue maturity assessment and risk analysis for investors and founder-led transactions.' },
-            { n:'06', t:'Sales Enablement',          d:'Process review, messaging refinement, and capability uplift that improves sales team effectiveness.' },
-            { n:'07', t:'Revenue Architecture',      d:'Systems thinking, KPI alignment, and commercial infrastructure designed for scalable growth.' },
-            { n:'08', t:'Investor Readiness',        d:'Commercial narrative refinement and growth-readiness review that builds investor confidence.' },
+            { n:'01', id:'pipeline-design',          t:'Pipeline Design',           d:'Funnel structure, stage logic, conversion discipline, and reporting frameworks that create pipeline clarity.' },
+            { n:'02', id:'fractional-cro',           t:'Fractional CRO',            d:'Senior revenue leadership and commercial planning without the overhead of a full-time executive hire.' },
+            { n:'03', id:'apac-market-entry',        t:'APAC Market Entry',         d:'Regional opportunity assessment, entry planning, and practical execution support for Asia-Pacific expansion.' },
+            { n:'04', id:'gtm-strategy',             t:'GTM Strategy',              d:'Positioning, route-to-market review, and execution sequencing aligned to your growth objectives.' },
+            { n:'05', id:'commercial-due-diligence',   t:'Commercial Due Diligence',  d:'Revenue maturity assessment and risk analysis for investors and founder-led transactions.' },
+            { n:'06', id:'sales-enablement',           t:'Sales Enablement',          d:'Process review, messaging refinement, and capability uplift that improves sales team effectiveness.' },
+            { n:'07', id:'revenue-architecture',       t:'Revenue Architecture',      d:'Systems thinking, KPI alignment, and commercial infrastructure designed for scalable growth.' },
+            { n:'08', id:'investor-readiness',         t:'Investor Readiness',        d:'Commercial narrative refinement and growth-readiness review that builds investor confidence.' },
           ] as const).map(s => (
             <div class="svc-card" key={s.n}>
               <span class="svc-card__num">{s.n}</span>
               <h4 class="svc-card__title">{s.t}</h4>
               <p class="svc-card__body">{s.d}</p>
-              <a href="/services" class="svc-card__link">
+              <a href={`/services#${s.id}`} class="svc-card__link">
                 Learn more
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>

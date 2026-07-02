@@ -87,7 +87,7 @@ export const EnquirePage = () => (
               <h3 style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:.5rem">Send an enquiry</h3>
               <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:2rem">Fill in the form below and we'll be in touch shortly.</p>
 
-              <form action="/enquire" method="post">
+              <form action="/enquire" method="post" id="enquire-form">
                 <div class="form-row">
                   <div class="form-group">
                     <label class="form-label" for="first-name">First name <span>*</span></label>
@@ -143,7 +143,7 @@ export const EnquirePage = () => (
                   </label>
                 </div>
 
-                <button type="submit" class="form-submit">
+                <button type="submit" class="form-submit" id="enquire-submit" disabled>
                   Send Enquiry
                 </button>
               </form>
