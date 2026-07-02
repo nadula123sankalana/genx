@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "echo \"No build step required\"",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/((?!static/).*)", "destination": "/api" }
+  ]
+}
