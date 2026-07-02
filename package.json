@@ -2,13 +2,15 @@
   "name": "webapp",
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.14",
     "hono": "^4.12.12"
   },
   "devDependencies": {
+    "@hono/vite-build": "^1.2.0",
     "@hono/vite-dev-server": "^0.18.2",
     "vite": "^6.3.5"
   }

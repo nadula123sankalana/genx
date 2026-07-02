@@ -9,13 +9,15 @@ npm install
 npm run dev
 ```
 
-The dev server runs the Hono app via `@hono/vite-dev-server`. Static assets live in `public/` (served at the site root, e.g. `public/static/style.css` → `/static/style.css`).
-
 ## Deploying to Vercel
 
-The app runs as a Vercel Edge Function defined in `api/index.ts`, which serves the Hono app exported from `src/index.tsx`. Routing is configured in `vercel.json`:
+```text
+npm run build
+```
 
-- All requests (except `/static/*`) are rewritten to the `/api` function.
-- Static files are served directly from `public/`.
+The build uses `@hono/vite-build/vercel` to bundle the Hono app (including JSX) into `.vercel/output`. Vercel detects `src/index.tsx` automatically and serves static files from `public/`.
 
-Just import the repository into Vercel — no build step is required.
+Import the repository into Vercel with:
+
+- **Build Command:** `npm run build`
+- **Output Directory:** leave default (Build Output API uses `.vercel/output`)
