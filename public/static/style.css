@@ -1865,11 +1865,14 @@ ul, ol { list-style: none; }
   .hero__wrap { grid-template-columns: 1fr; }
   .hero__card { display: none; }
   .svc-grid { grid-template-columns: repeat(2, 1fr); }
-  .approach-intro { grid-template-columns: 1fr; gap: 3rem; }
+  .approach-intro { grid-template-columns: 1fr; gap: 3rem; padding: var(--sp-2xl) 0; }
 
   .nav__links { display: none; }
   .nav__tog { display: flex; }
   .nav__inner { padding: 1rem 1.5rem; }
+
+  .split { gap: 3rem; }
+  .footer__top { gap: 3rem; }
 }
 
 @media (max-width: 768px) {
@@ -1880,43 +1883,76 @@ ul, ol { list-style: none; }
 
   .hero { padding: 7rem 0 4rem; }
   .hero__h1 { font-size: 2.4rem; }
+  .hero__lead { margin-bottom: 2rem; }
+  .hero__scroll { display: none; }
 
-  .metrics__grid { grid-template-columns: repeat(2, 1fr); }
+  .page-hero { padding: 7.5rem 0 3.5rem; }
+
+  .metrics { padding: 2rem 0; }
+  .metrics__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem 0; }
   .metrics__item + .metrics__item::before { display: none; }
   .metrics__item:nth-child(3)::before, .metrics__item:nth-child(4)::before { display: none; }
+
+  .section__head { margin-bottom: 2.5rem; }
 
   .cards3 { grid-template-columns: 1fr; }
   .svc-grid { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split--flip { direction: ltr; }
   .steps {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   .step__connector { display: none; }
 
-  .cta-band__inner { flex-direction: column; text-align: center; }
-  .cta-band__actions { justify-content: center; }
+  .cta-band { padding: 3.5rem 0; }
+  .cta-band__inner { flex-direction: column; text-align: left; align-items: flex-start; }
+  .cta-band__actions { justify-content: flex-start; }
 
+  .footer { padding: 3.5rem 0 2rem; }
   .footer__top { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer__nav { grid-template-columns: repeat(2, 1fr); }
 
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-stats-row { flex-wrap: wrap; gap: 1.5rem 2.5rem; }
   .who-grid { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; }
   .eng-grid { grid-template-columns: 1fr; }
   .enquire-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-row { grid-template-columns: 1fr; }
-  .service-detail { grid-template-columns: 50px 1fr; gap: 1rem; padding: 1.5rem; }
+  .service-detail { grid-template-columns: 50px 1fr; gap: 1rem 1.25rem; padding: 1.5rem; }
   .service-detail__icon { display: none; }
-  .step-full { grid-template-columns: 64px 1fr; gap: 1.5rem; }
-  .footer__nav { grid-template-columns: 1fr; }
+  .step-full { grid-template-columns: 56px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+  .step-full__title { font-size: 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .cta-band__actions { flex-direction: column; width: 100%; }
+  .cta-band__actions .btn { width: 100%; justify-content: center; }
+  .form-card { padding: 1.75rem 1.35rem; }
+  .founder-card { padding: 1.75rem; }
+  .eng-card { padding: 2rem 1.5rem; }
+  .value-item { padding: 1rem 1.15rem; }
+  .enquire-info__item { padding: 1.15rem; }
+  .section__cta-center .btn { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {
   .wrap { padding: 0 1.25rem; }
   .btn { padding: .75rem 1.4rem; font-size: .85rem; }
+  .hero__h1 { font-size: 2.05rem; }
+  .hero__lead { font-size: .98rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
   .metrics__grid { grid-template-columns: 1fr 1fr; }
-  .hero__actions { flex-direction: column; align-items: flex-start; }
+  .metrics__val { font-size: 1.9rem; }
+  .page-hero__h1 { font-size: 1.85rem; }
+  .service-detail { grid-template-columns: 1fr; gap: .5rem; }
+  .service-detail__num { font-size: 1.5rem; }
+  .step-full { grid-template-columns: 48px 1fr; gap: 1.15rem; }
+  .step-full__circle { width: 52px; height: 52px; }
+  .nav__inner { padding: .9rem 1.25rem; }
+  .founder-card__quote { font-size: .9rem; }
   .mob-menu__link { font-size: 1.45rem; }
   .mob-menu__inner { padding-top: 4.5rem; }
 }
