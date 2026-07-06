@@ -358,12 +358,14 @@ ul, ol { list-style: none; }
   gap: .7rem;
   flex-shrink: 0;
   text-decoration: none;
+  margin: -0.45rem 0;
 }
 .nav__logo-img {
-  height: 38px;
+  height: 58px;
   width: auto;
+  max-width: min(320px, 68vw);
   object-fit: contain;
-  filter: brightness(1.05);
+  display: block;
 }
 .nav__logo-fallback {
   display: flex;
@@ -958,12 +960,11 @@ ul, ol { list-style: none; }
   margin-bottom: 1.75rem;
 }
 .founder-card__logo {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  height: 58px;
+  width: auto;
+  max-width: min(320px, 68vw);
   object-fit: contain;
-  opacity: .85;
-  filter: brightness(1.1);
+  display: block;
 }
 
 /* Content side */
@@ -1111,10 +1112,16 @@ ul, ol { list-style: none; }
   margin-bottom: 2rem;
 }
 .footer__brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: .7rem;
   margin-bottom: 1rem;
+}
+.footer__logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
 }
 .footer__logo-mark {
   width: 34px;

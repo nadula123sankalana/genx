@@ -205,7 +205,7 @@ export const HomePage = () => (
                 <span class="tag">Melbourne, AU</span>
               </div>
               <img
-                src="https://www.genspark.ai/api/files/s/KQgqTdYC"
+                src="/c.png"
                 alt="Vantage Revenue Advisory"
                 class="founder-card__logo"
                 loading="lazy"

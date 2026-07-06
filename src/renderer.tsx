@@ -10,6 +10,9 @@ export const renderer = jsxRenderer(({ children, title, description }) => {
         <meta name="description" content={description as string || 'Building revenue engines for ambitious B2B technology companies. Senior fractional commercial leadership for founders, investors, and growth-stage businesses.'} />
         <meta name="theme-color" content="#0A0A0A" />
 
+        <link rel="icon" href="/k.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/k.png" />
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title as string || 'Vantage Revenue Advisory'} />

@@ -72,8 +72,8 @@ export const AboutPage = () => (
                 ))}
               </div>
               <img
-                src="https://www.genspark.ai/api/files/s/KQgqTdYC"
-                alt="Vantage Revenue Advisory Logo"
+                src="/c.png"
+                alt="Vantage Revenue Advisory"
                 class="founder-card__logo"
                 loading="lazy"
               />
