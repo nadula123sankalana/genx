@@ -96,7 +96,7 @@ export const Footer = () => (
         <div class="footer__brand">
           <a href="/" class="footer__brand-logo" aria-label="Vantage Revenue Advisory — Home">
             <img
-              src="/f.png"
+              src="/k.png"
               alt="Vantage Revenue Advisory"
               class="footer__logo-img"
               loading="lazy"
